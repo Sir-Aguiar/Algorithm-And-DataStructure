@@ -6,20 +6,14 @@ const swapArray = (array, n1, n2) => {
   array[n2] = aux
 }
 
-const findLowerValueIndex = (avaliable_position, array) => {
-  let min_index = avaliable_position;
-
-  for (let index = avaliable_position + 1; index < array.length; index++) {
-    if (array[index] < array[min_index]) min_index = index
-  }
-
-  return min_index
-}
-
 const sortArray = (array) => {
   for (avaliable_position = 0; avaliable_position < array.length; avaliable_position++) {
-    let lower_index = findLowerValueIndex(avaliable_position, array)
-    swapArray(array, avaliable_position, lower_index)
+    let lower_value_index = avaliable_position;
+
+    // Finding the lower value that can be setted on the avaliable position
+    for (let index = avaliable_position + 1; index < array.length; index++) {
+      if (array[index] < array[lower_value_index]) lower_value_index = index
+    }
+    swapArray(array, avaliable_position, lower_value_index)
   }
 }
-
