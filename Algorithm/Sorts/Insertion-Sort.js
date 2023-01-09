@@ -1,4 +1,3 @@
-let test = [7, 1, 2, 5, 7, 0]
 
 const InsertionSort = (array) => {
   for (let i_on_sort = 1; i_on_sort < test.length; i_on_sort++) {
@@ -12,6 +11,7 @@ const InsertionSort = (array) => {
       test[comparation_index + 1] = test[comparation_index]
       comparation_index--
     }
+
     // As the comparation index was decresead, the past position of the compared element is it + 1
     test[comparation_index + 1] = element
   }

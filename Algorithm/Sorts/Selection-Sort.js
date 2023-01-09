@@ -1,4 +1,3 @@
-let teste = [9, 4, 8, 5, 1]
 
 const swapArray = (array, n1, n2) => {
   let aux = array[n1]
